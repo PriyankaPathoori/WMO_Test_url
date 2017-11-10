@@ -20,6 +20,48 @@
             </resource>
             <resource>
                 <filtering>true</filtering>
+                <directory>services/MyJavaService/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>services/MyJavaService1/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>services/MyJavaService2/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>services/MyJavaService3/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>services/fda/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>services/googleapis/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
                 <directory>services/hrdb/src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
@@ -35,6 +77,20 @@
             <resource>
                 <filtering>true</filtering>
                 <directory>services/securityService/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>services/wavemakeronline/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>services/wavemakeronline1/src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
                 </excludes>
@@ -118,9 +174,17 @@
                         <configuration>
                             <sources>
                                 <source>services/DB123Testing/src</source>
+                                <source>services/MyJavaService/src</source>
+                                <source>services/MyJavaService1/src</source>
+                                <source>services/MyJavaService2/src</source>
+                                <source>services/MyJavaService3/src</source>
+                                <source>services/fda/src</source>
+                                <source>services/googleapis/src</source>
                                 <source>services/hrdb/src</source>
                                 <source>services/salesdb/src</source>
                                 <source>services/securityService/src</source>
+                                <source>services/wavemakeronline/src</source>
+                                <source>services/wavemakeronline1/src</source>
                             </sources>
                         </configuration>
                     </execution>
@@ -335,6 +399,6 @@
         <profile.props.file>development.properties</profile.props.file>
         <spring.version>4.3.9.RELEASE</spring.version>
         <spring.security.version>4.1.2.RELEASE</spring.security.version>
-        <wavemaker.studio.version>9.0.2.3848</wavemaker.studio.version>
+        <wavemaker.studio.version>9.0.2.3854</wavemaker.studio.version>
     </properties>
 </project>

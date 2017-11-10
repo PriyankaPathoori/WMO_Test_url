@@ -1,0 +1,8 @@
+<wm-page data-ng-controller="Test1PageController" pagetitle="Test 1" name="page1">
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-search name="search1" type="search" dataset="bind:Variables.Emp.dataSet" searchkey="empId" displaylabel="firstname" displayimagesrc="picurl" datafield="firstname"></wm-search>
+            <wm-search name="search2" dataset="bind:Variables.RepsData.dataSet" searchkey="name" displaylabel="name" displayimagesrc="picurl" datafield="name"></wm-search>
+        </wm-page-content>
+    </wm-content>
+</wm-page>

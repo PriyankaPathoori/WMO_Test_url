@@ -1,24 +1,51 @@
 {
-  "username" : "{WM_CLOUD_MYSQL_USER_NAME}",
-  "password" : "{WM_CLOUD_MYSQL_PASSWORD}",
-  "url" : "jdbc:mysql://{WM_CLOUD_MYSQL_HOST}/salesdb?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&createDatabaseIfNotExist=true",
-  "driverClass" : "com.mysql.jdbc.Driver",
-  "dialect" : "com.wavemaker.runtime.data.dialect.MySQLDialect",
+  "username" : "sa",
+  "password" : "7b6a43524a78700d662158",
+  "url" : "jdbc:hsqldb:file:{WebAppRoot}/WEB-INF/data/salesdb;shutdown=true;ifexists=true;hsqldb.lock_file=false;",
+  "driverClass" : "org.hsqldb.jdbcDriver",
+  "dialect" : "org.hibernate.dialect.HSQLDialect",
   "serviceId" : "salesdb",
   "packageName" : "com.testing_nov_6th.salesdb",
-  "dbType" : "MySQL",
-  "host" : "{WM_CLOUD_MYSQL_HOST}",
+  "dbType" : "HSQLDB",
+  "host" : "localhost",
   "dbName" : "salesdb",
   "port" : "",
-  "schemaName" : null,
+  "schemaName" : "PUBLIC",
   "tableFilter" : [ {
-    "table" : "sample",
-    "schema" : null
+    "table" : "CHANNELS",
+    "schema" : "PUBLIC"
+  }, {
+    "table" : "CUSTOMERS",
+    "schema" : "PUBLIC"
+  }, {
+    "table" : "FOLLOW_UPS",
+    "schema" : "PUBLIC"
+  }, {
+    "table" : "LEADS",
+    "schema" : "PUBLIC"
+  }, {
+    "table" : "PRODUCTS",
+    "schema" : "PUBLIC"
+  }, {
+    "table" : "QUOTES",
+    "schema" : "PUBLIC"
+  }, {
+    "table" : "REPS",
+    "schema" : "PUBLIC"
+  }, {
+    "table" : "SALES",
+    "schema" : "PUBLIC"
+  }, {
+    "table" : "STATES",
+    "schema" : "PUBLIC"
+  }, {
+    "table" : "TASKS",
+    "schema" : "PUBLIC"
   } ],
-  "schemaFilter" : [ ],
+  "schemaFilter" : [ ".*" ],
   "impersonateUser" : false,
-  "activeDirectoryDomain" : null,
-  "hbm2ddl" : "update",
+  "activeDirectoryDomain" : "",
+  "hbm2ddl" : "none",
   "maxPageSize" : 100,
   "minPoolSize" : 2,
   "maxPoolSize" : 4,
@@ -30,5 +57,5 @@
     "reason" : null,
     "message" : null
   },
-  "readOnly" : false
+  "readOnly" : true
 }

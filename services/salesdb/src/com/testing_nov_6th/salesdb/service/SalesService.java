@@ -18,64 +18,64 @@ import com.wavemaker.runtime.data.expression.QueryFilter;
 import com.wavemaker.runtime.data.model.AggregationInfo;
 import com.wavemaker.runtime.file.model.Downloadable;
 
-import com.testing_nov_6th.salesdb.Sample;
+import com.testing_nov_6th.salesdb.Sales;
 
 /**
- * Service object for domain model class {@link Sample}.
+ * Service object for domain model class {@link Sales}.
  */
-public interface SampleService {
+public interface SalesService {
 
     /**
-     * Creates a new Sample. It does cascade insert for all the children in a single transaction.
+     * Creates a new Sales. It does cascade insert for all the children in a single transaction.
      *
-     * This method overrides the input field values using Server side or database managed properties defined on Sample if any.
+     * This method overrides the input field values using Server side or database managed properties defined on Sales if any.
      *
-     * @param sample Details of the Sample to be created; value cannot be null.
-     * @return The newly created Sample.
+     * @param salesInstance Details of the Sales to be created; value cannot be null.
+     * @return The newly created Sales.
      */
-	Sample create(@Valid Sample sample);
+	Sales create(@Valid Sales salesInstance);
 
 
 	/**
-	 * Returns Sample by given id if exists.
+	 * Returns Sales by given id if exists.
 	 *
-	 * @param sampleId The id of the Sample to get; value cannot be null.
-	 * @return Sample associated with the given sampleId.
-     * @throws EntityNotFoundException If no Sample is found.
+	 * @param salesId The id of the Sales to get; value cannot be null.
+	 * @return Sales associated with the given salesId.
+     * @throws EntityNotFoundException If no Sales is found.
 	 */
-	Sample getById(Integer sampleId) throws EntityNotFoundException;
+	Sales getById(Integer salesId) throws EntityNotFoundException;
 
     /**
-	 * Find and return the Sample by given id if exists, returns null otherwise.
+	 * Find and return the Sales by given id if exists, returns null otherwise.
 	 *
-	 * @param sampleId The id of the Sample to get; value cannot be null.
-	 * @return Sample associated with the given sampleId.
+	 * @param salesId The id of the Sales to get; value cannot be null.
+	 * @return Sales associated with the given salesId.
 	 */
-	Sample findById(Integer sampleId);
+	Sales findById(Integer salesId);
 
 
 	/**
-	 * Updates the details of an existing Sample. It replaces all fields of the existing Sample with the given sample.
+	 * Updates the details of an existing Sales. It replaces all fields of the existing Sales with the given salesInstance.
 	 *
-     * This method overrides the input field values using Server side or database managed properties defined on Sample if any.
+     * This method overrides the input field values using Server side or database managed properties defined on Sales if any.
      *
-	 * @param sample The details of the Sample to be updated; value cannot be null.
-	 * @return The updated Sample.
-	 * @throws EntityNotFoundException if no Sample is found with given input.
+	 * @param salesInstance The details of the Sales to be updated; value cannot be null.
+	 * @return The updated Sales.
+	 * @throws EntityNotFoundException if no Sales is found with given input.
 	 */
-	Sample update(@Valid Sample sample) throws EntityNotFoundException;
+	Sales update(@Valid Sales salesInstance) throws EntityNotFoundException;
 
     /**
-	 * Deletes an existing Sample with the given id.
+	 * Deletes an existing Sales with the given id.
 	 *
-	 * @param sampleId The id of the Sample to be deleted; value cannot be null.
-	 * @return The deleted Sample.
-	 * @throws EntityNotFoundException if no Sample found with the given id.
+	 * @param salesId The id of the Sales to be deleted; value cannot be null.
+	 * @return The deleted Sales.
+	 * @throws EntityNotFoundException if no Sales found with the given id.
 	 */
-	Sample delete(Integer sampleId) throws EntityNotFoundException;
+	Sales delete(Integer salesId) throws EntityNotFoundException;
 
 	/**
-	 * Find all Samples matching the given QueryFilter(s).
+	 * Find all Sales matching the given QueryFilter(s).
      * All the QueryFilter(s) are ANDed to filter the results.
      * This method returns Paginated results.
 	 *
@@ -83,30 +83,30 @@ public interface SampleService {
 	 *
      * @param queryFilters Array of queryFilters to filter the results; No filters applied if the input is null/empty.
      * @param pageable Details of the pagination information along with the sorting options. If null returns all matching records.
-     * @return Paginated list of matching Samples.
+     * @return Paginated list of matching Sales.
      *
      * @see QueryFilter
      * @see Pageable
      * @see Page
 	 */
     @Deprecated
-	Page<Sample> findAll(QueryFilter[] queryFilters, Pageable pageable);
+	Page<Sales> findAll(QueryFilter[] queryFilters, Pageable pageable);
 
     /**
-	 * Find all Samples matching the given input query. This method returns Paginated results.
+	 * Find all Sales matching the given input query. This method returns Paginated results.
      * Note: Go through the documentation for <u>query</u> syntax.
 	 *
      * @param query The query to filter the results; No filters applied if the input is null/empty.
      * @param pageable Details of the pagination information along with the sorting options. If null returns all matching records.
-     * @return Paginated list of matching Samples.
+     * @return Paginated list of matching Sales.
      *
      * @see Pageable
      * @see Page
 	 */
-    Page<Sample> findAll(String query, Pageable pageable);
+    Page<Sales> findAll(String query, Pageable pageable);
 
     /**
-	 * Exports all Samples matching the given input query to the given exportType format.
+	 * Exports all Sales matching the given input query to the given exportType format.
      * Note: Go through the documentation for <u>query</u> syntax.
 	 *
      * @param exportType The format in which to export the data; value cannot be null.
@@ -121,11 +121,11 @@ public interface SampleService {
     Downloadable export(ExportType exportType, String query, Pageable pageable);
 
 	/**
-	 * Retrieve the count of the Samples in the repository with matching query.
+	 * Retrieve the count of the Sales in the repository with matching query.
      * Note: Go through the documentation for <u>query</u> syntax.
      *
      * @param query query to filter results. No filters applied if the input is null/empty.
-	 * @return The count of the Sample.
+	 * @return The count of the Sales.
 	 */
 	long count(String query);
 

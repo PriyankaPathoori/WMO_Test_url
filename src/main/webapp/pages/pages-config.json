@@ -3,6 +3,14 @@
   "type" : "PARTIAL",
   "params" : [ ]
 }, {
+  "name" : "DataTable",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Liveform",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "Login",
   "type" : "PAGE",
   "params" : [ ]
@@ -12,6 +20,10 @@
   "params" : [ ]
 }, {
   "name" : "Test",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Test1",
   "type" : "PAGE",
   "params" : [ ]
 }, {
@@ -37,6 +49,10 @@
 }, {
   "name" : "rightnav",
   "type" : "RIGHTNAV",
+  "params" : [ ]
+}, {
+  "name" : "sample",
+  "type" : "PAGE",
   "params" : [ ]
 }, {
   "name" : "topnav",

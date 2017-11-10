@@ -16,10 +16,10 @@
     "excludedUrls" : null
   },
   "xssConfig" : {
-    "enforceXssSecurity" : false,
+    "enforceXssSecurity" : true,
     "policyFile" : null,
-    "xssFilterStrategy" : "NONE",
-    "policyType" : "IMPORT"
+    "xssFilterStrategy" : "WHITE_LIST",
+    "policyType" : "MANUAL"
   },
   "csrfConfig" : {
     "enforceCsrfSecurity" : true,

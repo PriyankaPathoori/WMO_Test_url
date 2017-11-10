@@ -24,76 +24,76 @@ import com.wavemaker.runtime.data.expression.QueryFilter;
 import com.wavemaker.runtime.data.model.AggregationInfo;
 import com.wavemaker.runtime.file.model.Downloadable;
 
-import com.testing_nov_6th.salesdb.Sample;
+import com.testing_nov_6th.salesdb.Sales;
 
 
 /**
- * ServiceImpl object for domain model class Sample.
+ * ServiceImpl object for domain model class Sales.
  *
- * @see Sample
+ * @see Sales
  */
-@Service("salesdb.SampleService")
+@Service("salesdb.SalesService")
 @Validated
-public class SampleServiceImpl implements SampleService {
+public class SalesServiceImpl implements SalesService {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(SampleServiceImpl.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(SalesServiceImpl.class);
 
 
     @Autowired
-    @Qualifier("salesdb.SampleDao")
-    private WMGenericDao<Sample, Integer> wmGenericDao;
+    @Qualifier("salesdb.SalesDao")
+    private WMGenericDao<Sales, Integer> wmGenericDao;
 
-    public void setWMGenericDao(WMGenericDao<Sample, Integer> wmGenericDao) {
+    public void setWMGenericDao(WMGenericDao<Sales, Integer> wmGenericDao) {
         this.wmGenericDao = wmGenericDao;
     }
 
     @Transactional(value = "salesdbTransactionManager")
     @Override
-	public Sample create(Sample sample) {
-        LOGGER.debug("Creating a new Sample with information: {}", sample);
-        Sample sampleCreated = this.wmGenericDao.create(sample);
-        return sampleCreated;
+	public Sales create(Sales salesInstance) {
+        LOGGER.debug("Creating a new Sales with information: {}", salesInstance);
+        Sales salesInstanceCreated = this.wmGenericDao.create(salesInstance);
+        return salesInstanceCreated;
     }
 
 	@Transactional(readOnly = true, value = "salesdbTransactionManager")
 	@Override
-	public Sample getById(Integer sampleId) throws EntityNotFoundException {
-        LOGGER.debug("Finding Sample by id: {}", sampleId);
-        Sample sample = this.wmGenericDao.findById(sampleId);
-        if (sample == null){
-            LOGGER.debug("No Sample found with id: {}", sampleId);
-            throw new EntityNotFoundException(String.valueOf(sampleId));
+	public Sales getById(Integer salesId) throws EntityNotFoundException {
+        LOGGER.debug("Finding Sales by id: {}", salesId);
+        Sales salesInstance = this.wmGenericDao.findById(salesId);
+        if (salesInstance == null){
+            LOGGER.debug("No Sales found with id: {}", salesId);
+            throw new EntityNotFoundException(String.valueOf(salesId));
         }
-        return sample;
+        return salesInstance;
     }
 
     @Transactional(readOnly = true, value = "salesdbTransactionManager")
 	@Override
-	public Sample findById(Integer sampleId) {
-        LOGGER.debug("Finding Sample by id: {}", sampleId);
-        return this.wmGenericDao.findById(sampleId);
+	public Sales findById(Integer salesId) {
+        LOGGER.debug("Finding Sales by id: {}", salesId);
+        return this.wmGenericDao.findById(salesId);
     }
 
 
 	@Transactional(rollbackFor = EntityNotFoundException.class, value = "salesdbTransactionManager")
 	@Override
-	public Sample update(Sample sample) throws EntityNotFoundException {
-        LOGGER.debug("Updating Sample with information: {}", sample);
-        this.wmGenericDao.update(sample);
+	public Sales update(Sales salesInstance) throws EntityNotFoundException {
+        LOGGER.debug("Updating Sales with information: {}", salesInstance);
+        this.wmGenericDao.update(salesInstance);
 
-        Integer sampleId = sample.getId();
+        Integer salesId = salesInstance.getId();
 
-        return this.wmGenericDao.findById(sampleId);
+        return this.wmGenericDao.findById(salesId);
     }
 
     @Transactional(value = "salesdbTransactionManager")
 	@Override
-	public Sample delete(Integer sampleId) throws EntityNotFoundException {
-        LOGGER.debug("Deleting Sample with id: {}", sampleId);
-        Sample deleted = this.wmGenericDao.findById(sampleId);
+	public Sales delete(Integer salesId) throws EntityNotFoundException {
+        LOGGER.debug("Deleting Sales with id: {}", salesId);
+        Sales deleted = this.wmGenericDao.findById(salesId);
         if (deleted == null) {
-            LOGGER.debug("No Sample found with id: {}", sampleId);
-            throw new EntityNotFoundException(String.valueOf(sampleId));
+            LOGGER.debug("No Sales found with id: {}", salesId);
+            throw new EntityNotFoundException(String.valueOf(salesId));
         }
         this.wmGenericDao.delete(deleted);
         return deleted;
@@ -101,22 +101,22 @@ public class SampleServiceImpl implements SampleService {
 
 	@Transactional(readOnly = true, value = "salesdbTransactionManager")
 	@Override
-	public Page<Sample> findAll(QueryFilter[] queryFilters, Pageable pageable) {
-        LOGGER.debug("Finding all Samples");
+	public Page<Sales> findAll(QueryFilter[] queryFilters, Pageable pageable) {
+        LOGGER.debug("Finding all Sales");
         return this.wmGenericDao.search(queryFilters, pageable);
     }
 
     @Transactional(readOnly = true, value = "salesdbTransactionManager")
     @Override
-    public Page<Sample> findAll(String query, Pageable pageable) {
-        LOGGER.debug("Finding all Samples");
+    public Page<Sales> findAll(String query, Pageable pageable) {
+        LOGGER.debug("Finding all Sales");
         return this.wmGenericDao.searchByQuery(query, pageable);
     }
 
     @Transactional(readOnly = true, value = "salesdbTransactionManager")
     @Override
     public Downloadable export(ExportType exportType, String query, Pageable pageable) {
-        LOGGER.debug("exporting data in the service salesdb for table Sample to {} format", exportType);
+        LOGGER.debug("exporting data in the service salesdb for table Sales to {} format", exportType);
         return this.wmGenericDao.export(exportType, query, pageable);
     }
 

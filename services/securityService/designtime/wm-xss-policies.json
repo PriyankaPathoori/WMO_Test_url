@@ -1,58 +1,73 @@
 {
-  "tagRules": [ {
-      "name": "script",
-      "action": "REMOVE"
-    }, {
-      "name": "noscript",
-      "action": "REMOVE"
-    }, {
-      "name": "iframe",
-      "action": "REMOVE"
-    }, {
-      "name": "frameset",
-      "action": "REMOVE"	
-    }, {
-      "name": "frame",
-      "action": "REMOVE"	
-    }, {
-      "name": "noframes",
-      "action": "REMOVE"	
-    }, {
-      "name": "p",
-      "action": "VALIDATE"	
-    }, {
-      "name": "div",
-      "action": "VALIDATE"	
-    }, {
-      "name": "i",
-      "action": "VALIDATE"	
-    }, {
-      "name": "b",
-      "action": "FILTER"	
-    }, {
-      "name": "em",
-      "action": "VALIDATE"	
-    }, {
-      "name": "blockquote",
-      "action": "VALIDATE"	
-    }, {
-      "name": "tt",
-      "action": "VALIDATE"	
-    }, {
-      "name": "br",
-      "action": "TRUNCATE"	
-    }, {
-      "name": "a",
-      "action": "VALIDATE"	
-    }, {
-      "name": "ul",
-      "action": "VALIDATE"	
-    }, {
-      "name": "ol",
-      "action": "VALIDATE"	
-    }, {
-      "name": "li",
-      "action": "VALIDATE"	
-    } ],
+  "tagRules" : [ {
+    "name" : "tt",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "ertu",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "a",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "blockquote",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "b",
+    "action" : "FILTER"
+  }, {
+    "name" : "test",
+    "action" : "REMOVE"
+  }, {
+    "name" : "iuert",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "frameset",
+    "action" : "REMOVE"
+  }, {
+    "name" : "f",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "eurite",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "eirt",
+    "action" : "REMOVE"
+  }, {
+    "name" : "script",
+    "action" : "REMOVE"
+  }, {
+    "name" : "ueuert",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "noframes",
+    "action" : "REMOVE"
+  }, {
+    "name" : "div",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "p",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "br",
+    "action" : "TRUNCATE"
+  }, {
+    "name" : "noscript",
+    "action" : "REMOVE"
+  }, {
+    "name" : "ul",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "z",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "iframe",
+    "action" : "REMOVE"
+  }, {
+    "name" : "ol",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "frame",
+    "action" : "REMOVE"
+  } ],
   "unknownTagAction" : "REMOVE"
 }

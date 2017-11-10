@@ -26,6 +26,17 @@
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
+  "goToPage_DataTable" : {
+    "_id" : "wm-goToPage_DataTable-wm.NavigationVariable-1510216030934",
+    "name" : "goToPage_DataTable",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "DataTable",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_emptyVal" : {
     "_id" : "wm-goToPage_emptyVal-wm.NavigationVariable-1510123634819",
     "name" : "goToPage_emptyVal",
@@ -37,6 +48,17 @@
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
+  "goToPage_Liveform" : {
+    "_id" : "wm-goToPage_Liveform-wm.NavigationVariable-1510216012569",
+    "name" : "goToPage_Liveform",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Liveform",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_Main" : {
     "_id" : "wm-wm.NavigationVariable1389180517517",
     "name" : "goToPage_Main",
@@ -45,24 +67,126 @@
     "operation" : "gotoPage",
     "pageName" : "Main"
   },
-  "goToPage_Test" : {
-    "_id" : "wm-goToPage_Test-wm.NavigationVariable-1509951614440",
-    "name" : "goToPage_Test",
+  "goToPage_sample" : {
+    "_id" : "wm-goToPage_sample-wm.NavigationVariable-1510287287271",
+    "name" : "goToPage_sample",
     "owner" : "App",
     "category" : "wm.NavigationVariable",
     "dataBinding" : [ ],
     "operation" : "gotoPage",
+    "pageName" : "sample",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Test1" : {
+    "_id" : "wm-goToPage_Test1-wm.NavigationVariable-1510211614457",
+    "name" : "goToPage_Test1",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Test1",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Testuser" : {
+    "_id" : "wm-goToPage_Test-wm.NavigationVariable-1509951614440",
+    "name" : "goToPage_Testuser",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "Test",
+      "type" : "string"
+    } ],
+    "operation" : "gotoPage",
     "pageName" : "Test",
     "dataSet" : [ ],
     "pageTransitions" : "none"
+  },
+  "loggedInUser" : {
+    "_id" : "wm-loggedInUser-wm.Variable-1510218401592",
+    "name" : "loggedInUser",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "name" : "",
+      "id" : "",
+      "tenantId" : "",
+      "isAuthenticated" : false,
+      "isSecurityEnabled" : true,
+      "roles" : [ ]
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "loginAction" : {
+    "_id" : "wm-loginAction-wm.LoginVariable-1510218401592",
+    "name" : "loginAction",
+    "owner" : "App",
+    "category" : "wm.LoginVariable",
+    "dataBinding" : [ {
+      "target" : "username",
+      "value" : "bind:Widgets.usernametext.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "password",
+      "value" : "bind:Widgets.passwordtext.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "rememberme",
+      "value" : "bind:Widgets.remembermecheck.datavalue",
+      "type" : "boolean"
+    } ],
+    "dataSet" : {
+      "username" : "",
+      "password" : "",
+      "rememberme" : false
+    },
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "onError" : "loginVariableonError($event, $s)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "useDefaultSuccessHandler" : true
+  },
+  "logoutAction" : {
+    "_id" : "wm-logoutAction-wm.LogoutVariable-1510218401592",
+    "name" : "logoutAction",
+    "owner" : "App",
+    "category" : "wm.LogoutVariable",
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "redirectTo" : "Login",
+    "useDefaultSuccessHandler" : true
+  },
+  "staticVariable2" : {
+    "_id" : "wm-staticVariable2-wm.Variable-1509957264737",
+    "name" : "staticVariable2",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ "test", "apple", "te123", "randomvalue", "testvalue", "user", "admin" ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
   },
   "supportedLocale" : {
     "_id" : "wm-wm.Variable1402640443182",
     "name" : "supportedLocale",
     "owner" : "App",
     "category" : "wm.Variable",
+    "dataBinding" : [ ],
     "dataSet" : {
-      "en" : "English"
+      "en" : "English",
+      "te-in" : "తెలుగు (భారత దేశం)",
+      "el-cy" : "ελληνικά (Κύπρος)"
     },
     "type" : "string",
     "isList" : false,
@@ -156,7 +280,7 @@
       "tableType" : "TABLE",
       "primaryFields" : [ "userId" ]
     },
-    "bindCount" : 1,
+    "bindCount" : 2,
     "tableName" : "USER",
     "tableType" : "TABLE",
     "properties" : [ ],

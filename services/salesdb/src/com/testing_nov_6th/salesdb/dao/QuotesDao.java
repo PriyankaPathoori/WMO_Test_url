@@ -13,14 +13,14 @@ import org.springframework.stereotype.Repository;
 
 import com.wavemaker.runtime.data.dao.WMGenericDaoImpl;
 
-import com.testing_nov_6th.salesdb.Sample;
+import com.testing_nov_6th.salesdb.Quotes;
 
 /**
- * Specifies methods used to obtain and modify Sample related information
+ * Specifies methods used to obtain and modify Quotes related information
  * which is stored in the database.
  */
-@Repository("salesdb.SampleDao")
-public class SampleDao extends WMGenericDaoImpl<Sample, Integer> {
+@Repository("salesdb.QuotesDao")
+public class QuotesDao extends WMGenericDaoImpl<Quotes, Integer> {
 
     @Autowired
     @Qualifier("salesdbTemplate")

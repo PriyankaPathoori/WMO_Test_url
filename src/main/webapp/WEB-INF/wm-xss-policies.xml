@@ -158,22 +158,27 @@
     </tags-to-encode>
     <tag-rules>
         <tag name="tt" action="validate"/>
+        <tag name="ertu" action="validate"/>
         <tag name="a" action="validate"/>
-        <tag name="b" action="filter"/>
         <tag name="blockquote" action="validate"/>
+        <tag name="b" action="filter"/>
+        <tag name="test" action="remove"/>
+        <tag name="iuert" action="validate"/>
         <tag name="frameset" action="remove"/>
-        <tag name="em" action="validate"/>
-        <tag name="i" action="validate"/>
+        <tag name="f" action="validate"/>
+        <tag name="eurite" action="validate"/>
+        <tag name="eirt" action="remove"/>
         <tag name="script" action="remove"/>
+        <tag name="ueuert" action="validate"/>
         <tag name="noframes" action="remove"/>
-        <tag name="p" action="validate"/>
         <tag name="div" action="validate"/>
+        <tag name="p" action="validate"/>
         <tag name="br" action="truncate"/>
         <tag name="noscript" action="remove"/>
         <tag name="ul" action="validate"/>
+        <tag name="z" action="validate"/>
         <tag name="iframe" action="remove"/>
         <tag name="ol" action="validate"/>
-        <tag name="li" action="validate"/>
         <tag name="frame" action="remove"/>
     </tag-rules>
     <css-rules/>
