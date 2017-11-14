@@ -6,7 +6,7 @@ var _WM_APP_PROPERTIES = {
   "homePage" : "Main",
   "name" : "WMO_Test_url",
   "platformType" : "WEB",
-  "securityEnabled" : "false",
+  "securityEnabled" : "true",
   "supportedLanguages" : "en,te-in,el-cy",
   "timeFormat" : "",
   "type" : "APPLICATION",

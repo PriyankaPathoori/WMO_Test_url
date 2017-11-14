@@ -47,6 +47,10 @@
   "type" : "LEFTNAV",
   "params" : [ ]
 }, {
+  "name" : "partial",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
   "name" : "rightnav",
   "type" : "RIGHTNAV",
   "params" : [ ]
